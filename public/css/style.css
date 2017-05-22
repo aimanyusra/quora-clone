@@ -1241,7 +1241,7 @@ General Styles - Owlcarousel
 	Navbar
 --------------------------------------------------------------*/
 .navbar-custom {
-  background-color: rgba(10, 10, 10, 0.9);
+  background-color: #f44336;
   border: 0;
   border-radius: 0;
   z-index: 1000;
@@ -2932,7 +2932,7 @@ Google map
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     text-transform: uppercase;
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: #3498DB;
+    background-color: #f44336;
 }
 bootstrap.min.css:5
 .navbar-fixed-top {
@@ -2953,4 +2953,17 @@ bootstrap.min.css:5
 /*modal header center*/
 .modal {
   top: 20%;
+}
+
+.question {
+  color: #0D3B66;
+}
+
+/*SIDEBAR*/
+#sidebar-wrapper {
+  background-color: #FAF0CA;
+}
+
+.top {
+  padding: 40px;
 }

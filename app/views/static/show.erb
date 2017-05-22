@@ -1,0 +1,43 @@
+require 'byebug'
+
+<div class="wrapper">	
+	<div class="row">
+		<section class="module">
+			<div class="container">
+			  <!-- Trigger the modal with a button -->
+			  <h1 class="text-center question"><%= @question.user_input %></h1>
+
+			  </div>
+		</section>	
+	</div>
+</div>
+
+<div class="wrapper">
+	<div class="row">
+		<form class='text-center' action="/answers" method="post" >
+			<input type="text" name="user_input" size="55" contenteditable="true" class="">
+			<input type="hidden" name="question_id" value='<%= @question.id%>'>              
+			<button type="submit" class="btn btn-default" ><i class="fa fa-pencil"></i> Answer
+			</button>
+       </form>
+	</div>
+</div>
+
+<div class="wrapper">
+	<div class="row">
+		<div class="container">
+			                 
+			        <% Answer.order('created_at DESC').where(question_id: @question.id).each do |a| %>
+                        	
+                            <h1><%= a.user_input %></h1></a>
+                            <p><a href="/profile/<%= User.find(a.user_id).user_name %>" ><%= User.find(a.user_id).user_name %></a></p>
+                            
+   
+                    <% end %>
+
+
+		</div>
+	</div>
+	
+
+

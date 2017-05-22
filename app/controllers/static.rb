@@ -1,9 +1,13 @@
 get '/' do
-  erb :"static/index"
+  if logged_in?
+     erb :"static/home"
+  else
+     erb :"static/index"
+  end
 end
 
-get '/homepage' do
-	erb :"static/homepage"
+get '/home' do
+	erb :"static/home"
 end
 
 

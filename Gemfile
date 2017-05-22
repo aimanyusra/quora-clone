@@ -39,3 +39,4 @@ end
 # Adding BCrypt gem
 
 gem 'bcrypt', '~> 3.1.7'
+gem 'byebug'

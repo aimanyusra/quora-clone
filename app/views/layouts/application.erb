@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Quo</title>
+		<title>Kuo</title>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,10 +56,17 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="/">
-                    <i class="fa fa-question-circle-o" aria-hidden="true"></i> <span class="light">Q</span>uo
+                <%if logged_in? %>
+                <a class="navbar-brand page-scroll" href="/home">
+                    <i class="fa fa-info" aria-hidden="true"></i> <span class="light">K</span>uo
                 </a>
+                <%else%>
+                <a class="navbar-brand page-scroll" href="/">
+                    <i class="fa fa-info" aria-hidden="true"></i> <span class="light">K</span>uo
+                </a>
+                <%end%>
             </div>
+
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">

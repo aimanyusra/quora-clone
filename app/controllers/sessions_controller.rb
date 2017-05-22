@@ -10,14 +10,14 @@ post '/login' do
         # @flash= params[:username]
         # flash[:notice]        
         session[:user_id] = user.id
-        redirect "/homepage"
+        redirect "/home"
     else
         redirect '/'
     end
 end
 
 get '/profile/:id' do
-    @user =  User.find(params[:id])
+    @user =  User.find_by(params[:user_name])
     erb :"users/profile"
 end
 
